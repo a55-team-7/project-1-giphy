@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server"
+    "start": "live-server ."
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,8 @@
   "dependencies": {
     "eslint": "^8.56.0",
     "eslint-config-google": "^0.14.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }
