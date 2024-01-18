@@ -1,4 +1,4 @@
-import { ABOUT, CATEGORIES, CONTAINER_SELECTOR, FAVORITES, HOME } from '../common/constants.js';
+import { ABOUT, CATEGORIES, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING } from '../common/constants.js';
 import { loadCategories, loadCategory, loadMovies, loadSingleMovie } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
 import { toCategoriesView } from '../views/category-view.js';
@@ -17,9 +17,9 @@ export const loadPage = (page = '') => {
       setActiveNav(HOME);
       return renderHome();
 
-    case CATEGORIES:
-      setActiveNav(CATEGORIES);
-      return renderCategories();
+    case TRENDING:
+      setActiveNav(TRENDING);
+      return renderTrending();
 
     case FAVORITES:
       setActiveNav(FAVORITES);
@@ -52,6 +52,12 @@ export const renderCategory = (categoryId = null) => {
 
 const renderHome = () => {
   q(CONTAINER_SELECTOR).innerHTML = toHomeView();
+};
+
+
+const renderTrending = async() => {
+  const trendingGifs = loadTrendingGifs();
+  q(CONTAINER_SELECTOR).innerHTML = toTrendingView(trendingGifs);
 };
 
 const renderCategories = () => {
