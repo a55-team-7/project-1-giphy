@@ -1,13 +1,13 @@
 export const toHomeView = () => `
 <div id="home">
-  <h1>Mov(e)ster</h1>
+  <h1>TIPHY</h1>
   <div class="content">
-    <p>Simple movie database app. You can:</p>
+    <p>Welcome to Tiphy! This is one of Telerik's gifs databases. You can: ></p>
     <ul>
-      <li>Browse categories</li>
-      <li>Browse movies</li>
-      <li>Add and remove movies from favorites</li>
-      <li>Search for movies by title</li>
+      <li>Search a gif with a keyword</li>
+      <li>See trending gifs</li>
+      <li>Add a gif to Favorites</li>
+      <li>Upload your own gif!</li>
     </ul>
   </div>
 </div>
