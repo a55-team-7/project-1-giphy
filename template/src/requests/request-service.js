@@ -18,13 +18,13 @@ export const loadMovies = (categoryId = null) => {
   return movies;
 };
 
-export const loadSingleMovie = (id) => {
+export const loadSingleGif = (id) => {
   const movie = getMovieById(id);
 
   return movie;  
 };
 
-export const loadSearchMovies = (searchTerm = '') => {
+export const loadSearchGif = (searchTerm = '') => {
   const movies = searchMovies(searchTerm);
 
   return movies;
