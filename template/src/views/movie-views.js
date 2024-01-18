@@ -28,7 +28,7 @@ export const toMovieSimple = (movie) => `
 </div>
 `;
 
-const toMovieDetailed = (movie) => `
+const toGifDetailed = (movie) => `
 <div class="movie-detailed">
   <div class="poster">
     <img src="${movie.poster}">
