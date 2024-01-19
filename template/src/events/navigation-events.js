@@ -1,10 +1,9 @@
-import { ABOUT, CATEGORIES, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING } from '../common/constants.js';
-import { loadCategories, loadCategory, loadMovies, loadSingleMovie, loadTrendingGifs } from '../requests/request-service.js';
+import { ABOUT, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING } from '../common/constants.js';
+import {  loadSingleGif,  loadTrendingGifs } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
-import { toCategoriesView } from '../views/category-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
 import { toHomeView } from '../views/home-view.js';
-import { toMoviesFromCategoryView, toSingleGifView, toSingleMovieView } from '../views/movie-views.js';
+import {  toSingleGifView  } from '../views/gif-views.js';
 import { q, setActiveNav } from './helpers.js';
 import { getFavorites } from '../data/favorites.js';
 import { toTrendingView } from '../views/trending-view.js';
@@ -43,15 +42,16 @@ export const loadPage = (page = '') => {
 export const renderGifDetails = (id = null) => {
   const movie = loadSingleGif(id);
 
-  q(CONTAINER_SELECTOR).innerHTML = toSingleGifView(movie);
+  q(CONTAINER_SELECTOR).innerHTML = toSingleGifView();
 };
 
-export const renderCategory = (categoryId = null) => {
-  const category = loadCategory(categoryId);
-  const movies = loadMovies(category.id);
+//NOT SURE BUT I THINK IT NEEDS TO BE REMOVED
+// export const renderCategory = (categoryId = null) => {
+//   const category = loadCategory(categoryId);
+//   const movies = loadMovies(category.id);
 
-  q(CONTAINER_SELECTOR).innerHTML = toMoviesFromCategoryView(category, movies);
-};
+//   q(CONTAINER_SELECTOR).innerHTML = toMoviesFromCategoryView(category, movies);
+// };
 
 // private functions
 
@@ -65,17 +65,13 @@ const renderTrending = async() => {
   q(CONTAINER_SELECTOR).innerHTML =  toTrendingView(trendingGifs);
 };
 
-const renderCategories = () => {
-  const categories = loadCategories();
-
-  q(CONTAINER_SELECTOR).innerHTML = toCategoriesView(categories);
-};
+//Upload needs to be implemented
 
 const renderFavorites = () => {
   const favorites = getFavorites();
-  const movies = favorites.map(id => loadSingleMovie(id));
+  const gifs = favorites.map(id => loadSingleGif(id));
 
-  q(CONTAINER_SELECTOR).innerHTML = toFavoritesView(movies);
+  q(CONTAINER_SELECTOR).innerHTML = toFavoritesView(gifs);
 };
 
 const renderAbout = () => {

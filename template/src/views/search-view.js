@@ -1,10 +1,11 @@
-import { toMovieSimple } from './movie-views.js';
+import { toGifSimple } from './gif-views.js';
 
-export const toSearchView = (movies, searchTerm) => `
+//TO IMPLEMENT
+export const toSearchView = (gifs, searchTerm) => `
 <div id="movies">
   <h1>Movies found for "${searchTerm}":</h1>
   <div class="content">
-    ${movies.map(toMovieSimple).join('\n') || '<p>Add some movies to favorites to see them here.</p>'}
+    ${gifs.map(toGifSimple).join('\n') || '<p>Add some movies to favorites to see them here.</p>'}
   </div>
 </div>
 `;

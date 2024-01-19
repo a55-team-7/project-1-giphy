@@ -6,7 +6,7 @@ const findCategory = (categoryId) => {
 
 // public API
 
-export const getMoviesGeneralInfo = (categoryId = null) => {
+export const getGifGeneralInfo = (categoryId = null) => {
 
   const moviesFilter = categoryId
     ? m => m.genre === findCategory(categoryId).name
@@ -34,7 +34,7 @@ export const getMoviesFullInfo = (categoryId = null) => {
 
 export const getMovieById = (movieId = 0) => movies.find(m => m.id === movieId);
 
-export const searchMovies = (title = '') => title
+export const searchGif = (title = '') => title
   ? movies.filter(m => m.title.toLowerCase().includes(title.toLowerCase()))
   : movies;
 

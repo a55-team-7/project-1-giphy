@@ -22,6 +22,10 @@ export const getTrendingURL = (limit = 25, offset = 0) => `https://api.giphy.com
 
 export const searchURL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=&limit=25&offset=0&rating=g`;
 
+export const getSearchURL = (limit = 25, offset = 0) => `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=&limit=${limit}&offset=${offset}&rating=g`;
+
 export const displayGifDetailsURL = `https://api.giphy.com/v1/gifs/?api_key=${API_KEY}&rating=g`;
+
+export const getGifById = (gifID) => `https://api.giphy.com/v1/gifs/${gifID}?api_key=${API_KEY}&rating=g`;
 
 export const uploadURL = `https://upload.giphy.com/v1/gifs/?api_key=${API_KEY}`;
