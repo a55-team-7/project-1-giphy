@@ -279,4 +279,12 @@ div.movie-detailed div.movie-info {
   color: rgb(229, 210, 255);
 }
 
+.trending li {
+  padding: 30px;
+  display: inline-block;
+  text-align: center;
+  p {
+    font-size: 40px;
+  }
+}
 /* End about styles */
