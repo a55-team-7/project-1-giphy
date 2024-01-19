@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // show movie events
-    if (event.target.classList.contains('view-movie-btn')) {
-      renderMovieDetails(+event.target.getAttribute('data-movie-id'));
+    if (event.target.classList.contains('view-gifs-btn')) {
+      renderMovieDetails(+event.target.getAttribute('data-gifs-id'));
     }
 
     // toggle favorite event

@@ -1,6 +1,6 @@
 import { renderFavoriteStatus } from '../events/favorites-events.js';
 
-export const toMoviesFromCategoryView = (category, movies) => `
+export const toGifsFromTrendingView = (category, movies) => `
 <div id="movies">
   <h1>${category.name} movies:</h1>
   <div class="content">
@@ -9,7 +9,7 @@ export const toMoviesFromCategoryView = (category, movies) => `
 </div>
 `;
 
-export const toSingleMovieView = (movie) => `
+export const toSingleGifView = (gif) => `
 <div id="movies">
   <h1>${movie.title} (${movie.year})</h1>
   <div class="content">
@@ -18,7 +18,7 @@ export const toSingleMovieView = (movie) => `
 </div>
 `;
 
-export const toMovieSimple = (movie) => `
+export const toGifSimple = (gif) => `
 <div class="movie">
   <h1>${movie.title}</h1>
   <h2>${movie.year}</h2>
@@ -28,7 +28,7 @@ export const toMovieSimple = (movie) => `
 </div>
 `;
 
-const toGifDetailed = (movie) => `
+const toGifDetailed = (gif) => `
 <div class="movie-detailed">
   <div class="poster">
     <img src="${movie.poster}">

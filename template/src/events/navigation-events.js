@@ -1,10 +1,10 @@
-import { ABOUT, TRENDING, CONTAINER_SELECTOR, FAVORITES, HOME } from '../common/constants.js';
-import { loadCategories, loadCategory, loadMovies, loadSingleMovie, loadTrendingGifs } from '../requests/request-service.js';
+import { ABOUT, CATEGORIES, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING } from '../common/constants.js';
+import { loadCategories, loadCategory, loadMovies, loadSingleMovie } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
 import { toCategoriesView } from '../views/category-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
 import { toHomeView } from '../views/home-view.js';
-import { toMoviesFromCategoryView, toSingleMovieView } from '../views/movie-views.js';
+import { toMoviesFromCategoryView, toSingleGifView, toSingleMovieView } from '../views/movie-views.js';
 import { q, setActiveNav } from './helpers.js';
 import { getFavorites } from '../data/favorites.js';
 import { toTrendingView } from '../views/trending-view.js';
@@ -17,6 +17,10 @@ export const loadPage = (page = '') => {
     case HOME:
       setActiveNav(HOME);
       return renderHome();
+
+    case UPLOAD:
+      setActiveNav(UPLOAD);
+      return renderUpload();
 
     case TRENDING:
       setActiveNav(TRENDING);
@@ -36,10 +40,10 @@ export const loadPage = (page = '') => {
 
 };
 
-export const renderMovieDetails = (id = null) => {
-  const movie = loadSingleMovie(id);
+export const renderGifDetails = (id = null) => {
+  const movie = loadSingleGif(id);
 
-  q(CONTAINER_SELECTOR).innerHTML = toSingleMovieView(movie);
+  q(CONTAINER_SELECTOR).innerHTML = toSingleGifView(movie);
 };
 
 export const renderCategory = (categoryId = null) => {
