@@ -1,4 +1,4 @@
-import { getGifByIdURL, getTrendingURL } from '../common/constants.js';
+import { getGifByIdURL, getSearchURL, getTrendingURL } from '../common/constants.js';
 
 /**
 * 
@@ -36,7 +36,8 @@ export const loadSingleGifById = async(id) => {
 
 
 //TO FINISH
-export const loadSearchGif = async(searchTerm = '') => {
-  const gifs = await searchGif(searchTerm);
-  return gifs;
+export const loadSearchGif = async (searchTerm = '') => {
+  const response = await fetch(getSearchURL(25, 0, searchTerm));
+  const result = await response.json();
+  return result.data;
 };

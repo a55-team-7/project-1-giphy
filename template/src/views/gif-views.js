@@ -20,7 +20,7 @@ export const toSingleGifView = (gif) => `
 
 export const toGifSimple = (gif) => `
 <div class="gifs">
-  <h1>${gif.title}</h1>
+  <h1>${gif.title || 'Untitled'}</h1>
   <img src="${gif.images.fixed_width.url}"><br>
   <button class="view-gif-btn" data-gif-id="${gif.id}">View details</button>
   ${renderFavoriteStatus(gif.id)}
