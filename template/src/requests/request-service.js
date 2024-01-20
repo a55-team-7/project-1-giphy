@@ -37,7 +37,7 @@ export const loadSingleGifById = async(id) => {
 
 //TO FINISH
 export const loadSearchGif = async (searchTerm = '') => {
-  const response = await fetch(getSearchURL(25, 0) + `q=${searchTerm}`);
+  const response = await fetch(getSearchURL(25, 0, searchTerm));
   const result = await response.json();
   return result.data;
 };
