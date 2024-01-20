@@ -10,10 +10,10 @@ export const toGifsFromTrendingView = (gifs) => `
 `;
 
 export const toSingleGifView = (gif) => `
-<div id="gifs">
+<div id="gif">
   <h1>${gif.title}</h1>
   <div class="content">
-    ${toGifDetailed(movie)}
+    ${toGifDetailed(gif)}
   </div>
 </div>
 `;
@@ -33,7 +33,9 @@ const toGifDetailed = (gif) => `
     <img src="${gif.images.fixed_width.url}">
   </div>
   <div class="gif-info">
-    <p>User:</p>
+    <h2>${gif.title}</h2>
+    <h3>Uploaded by: ${gif.user.username}</h3>
+    <h3>Uploaded: ${gif.import_datetime}</h3>
   </div>
 </div>
 `;
