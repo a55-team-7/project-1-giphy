@@ -35,10 +35,7 @@ const toGifDetailed = (gif) => `
   <div class="gif-info">
     <h2>${gif.title}</h2>
     <h3>Uploaded by: ${gif.user.username}</h3>
-    <h3>Rating: ${gif.rating}</h3>
-    <h3>Source: <a href="${gif.source}">${gif.source}</a></h3>
-    <h3>Import date: ${gif.import_datetime}</h3>
-    <h3>Import date: ${gif.trending_datetime}</h3>
+    <h3>Uploaded: ${gif.import_datetime}</h3>
   </div>
 </div>
 `;
