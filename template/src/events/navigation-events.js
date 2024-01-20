@@ -46,10 +46,10 @@ export const loadPage = (page = '') => {
 
 };
 
-export const renderGifDetails = (id = null) => {
-  const movie = loadSingleGifById(id);
+export const renderGifDetails = async(id = null) => {
+  const gif = await loadSingleGifById(id);
 
-  q(CONTAINER_SELECTOR).innerHTML = toSingleGifView();
+  q(CONTAINER_SELECTOR).innerHTML = toSingleGifView(gif);
 };
 
 //NOT SURE BUT I THINK IT NEEDS TO BE REMOVED
