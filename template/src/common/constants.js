@@ -14,6 +14,10 @@ export const EMPTY_HEART = '♡';
 
 export const TRENDING = 'trending';
 
+export const UPLOAD = 'upload';
+
+export const UPLOADED = 'uploaded';
+
 export const API_KEY = 'GB1eH419EgtMMzttQ7t1wOClKAcArPG4';
 
 export const trendingURL = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=25&offset=0&rating=g`;
@@ -26,6 +30,8 @@ export const getSearchURL = (limit = 25, offset = 0) => `https://api.giphy.com/v
 
 export const displayGifDetailsURL = `https://api.giphy.com/v1/gifs/?api_key=${API_KEY}&rating=g`;
 
-export const getGifById = (gifID) => `https://api.giphy.com/v1/gifs/${gifID}?api_key=${API_KEY}&rating=g`;
+export const getGifByIdURL = (gifID) => `https://api.giphy.com/v1/gifs/${gifID}?api_key=${API_KEY}&rating=g`;
 
-export const uploadURL = `https://upload.giphy.com/v1/gifs/?api_key=${API_KEY}`;
+export const uploadURL = `https://upload.giphy.com/v1/gifs`;
+
+export const getUploadURL = () => `https://upload.giphy.com/v1/gifs`;

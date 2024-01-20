@@ -1,3 +1,5 @@
+import { renderFavoriteStatus } from "../events/favorites-events.js";
+
 /**
  * @param {Array<{
 * id: string,
@@ -31,6 +33,9 @@ const toSingleTrendingGifView = (trendingItem) => {
      <a href="#/trending/${trendingItem.id}">
        <img src="${trendingItem.images.fixed_width.url}" alt="${trendingItem.title}">
      </a>
+     <p>
+     ${renderFavoriteStatus(trendingItem.id)}
+     </p>
    </li>
  `;
 };

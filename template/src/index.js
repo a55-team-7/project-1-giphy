@@ -3,10 +3,11 @@ import { toggleFavoriteStatus } from './events/favorites-events.js';
 import { q } from './events/helpers.js';
 import { loadPage,  renderGifDetails } from './events/navigation-events.js';
 import { renderSearchItems } from './events/search-events.js';
+import { toggleUploadStatus, uploadGif } from './events/upload-events.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-
   // add global listener
+
   document.addEventListener('click', event => {
 
     // nav events
@@ -27,15 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // toggle favorite event
     if (event.target.classList.contains('favorite')) {
-      toggleFavoriteStatus(+event.target.getAttribute('data-gif-id'));
+      toggleFavoriteStatus(event.target.getAttribute('data-gif-id'));
     }
 
+    if(event.target.classList.contains('update-submit')) {
+        uploadGif(event);
+    }
   });
 
   // search events
   q('input#search').addEventListener('input', e => {
     renderSearchItems(e.target.value);
   });
+
 
   loadPage(HOME);
 

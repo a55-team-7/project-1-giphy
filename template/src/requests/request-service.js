@@ -1,9 +1,9 @@
-import { getGifById, getTrendingURL } from '../common/constants.js';
+import { getGifByIdURL, getTrendingURL } from '../common/constants.js';
 
 /**
- * 
- * @returns {Promise<Array<{
- * id: string,
+* 
+* @returns {Promise<Array<{
+* id: string,
 * rating: string,
 * title: string,
 * images: {
@@ -19,18 +19,20 @@ import { getGifById, getTrendingURL } from '../common/constants.js';
 */
 export const loadTrendingGifs = async() => {
   const response = await fetch(getTrendingURL(30));
+  console.log(response);
   const result = await response.json();
+  console.log(result);
   return result.data;
 };
 
 
-export const loadSingleGif = async(data) => {
-  const response = await fetch(getGifById(data.id));
+export const loadSingleGifById = async(id) => {
+  const response = await fetch(getGifByIdURL(id));
   const result = await response.json();
   return result.data; 
 };
 
-//Upload needs to be implemented
+
 
 
 //TO FINISH
