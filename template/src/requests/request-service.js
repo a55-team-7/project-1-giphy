@@ -1,4 +1,4 @@
-import { getGifByIdURL, getSearchURL, getTrendingURL } from '../common/constants.js';
+import { getGifByIdURL, getSearchURL, getTrendingURL, getRandomURL } from '../common/constants.js';
 
 /**
 * 
@@ -19,12 +19,15 @@ import { getGifByIdURL, getSearchURL, getTrendingURL } from '../common/constants
 */
 export const loadTrendingGifs = async() => {
   const response = await fetch(getTrendingURL(30));
-  console.log(response);
   const result = await response.json();
-  console.log(result);
   return result.data;
 };
 
+export const loadRandomGif = async() => {
+  const response = await fetch(getRandomURL());
+  const result = await response.json();
+  return result.data;
+};
 
 export const loadSingleGifById = async(id) => {
   const response = await fetch(getGifByIdURL(id));

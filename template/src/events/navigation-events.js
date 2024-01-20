@@ -1,5 +1,5 @@
 import { ABOUT, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING, UPLOAD, UPLOADED } from '../common/constants.js';
-import {  loadSingleGifById,  loadTrendingGifs } from '../requests/request-service.js';
+import {  loadSingleGifById,  loadTrendingGifs, loadRandomGif } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
 import { toHomeView } from '../views/home-view.js';
@@ -87,9 +87,10 @@ const renderUploaded = async() => {
 
 const renderFavorites = async() => {
   const favorites = getFavorites();
-  const gifs = await Promise.all(favorites.map(id => loadSingleGifById(id)));
+  const favoriteGifs = await Promise.all(favorites.map(id => loadSingleGifById(id)));
+  const randomGif = await loadRandomGif();
 
-  q(CONTAINER_SELECTOR).innerHTML = toFavoritesView(gifs);
+  q(CONTAINER_SELECTOR).innerHTML = toFavoritesView(favoriteGifs, randomGif);
 };
 
 const renderAbout = () => {
