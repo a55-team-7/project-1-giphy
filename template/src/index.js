@@ -38,8 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // search events
   q('input#search').addEventListener('keyup', e => {
-    if (e.key === 'Enter') {
-      renderSearchItems(e.target.value);
+    const searchTerm = e.target.value.trim();
+  
+    if (e.key === 'Enter' || searchTerm === '') {
+      renderSearchItems(searchTerm);
     }
   });
 
