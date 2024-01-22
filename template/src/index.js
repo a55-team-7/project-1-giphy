@@ -1,9 +1,9 @@
 import { HOME } from './common/constants.js';
 import { toggleFavoriteStatus } from './events/favorites-events.js';
 import { q } from './events/helpers.js';
-import { loadPage,  renderGifDetails } from './events/navigation-events.js';
+import { loadPage, renderGifDetails } from './events/navigation-events.js';
 import { renderSearchItems } from './events/search-events.js';
-import {uploadGif } from './events/upload-events.js';
+import { uploadGif } from './events/upload-events.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // add global listener
@@ -31,14 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleFavoriteStatus(event.target.getAttribute('data-gif-id'));
     }
 
-    if(event.target.classList.contains('update-submit')) {
-        uploadGif(event);
+    if (event.target.classList.contains('update-submit')) {
+      uploadGif(event);
     }
   });
 
   // search events
-  q('input#search').addEventListener('input', e => {
-    renderSearchItems(e.target.value);                       //if enter is pressed, the search is executed
+  q('input#search').addEventListener('keyup', e => {
+    if (e.key === 'Enter') {
+      renderSearchItems(e.target.value);
+    }
   });
 
 
@@ -51,10 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentScrollPos = window.pageYOffset;
     let prevScrollPos = window.pageYOffset;
     if (prevScrollPos < currentScrollPos) {
-    
+
       document.getElementById('banner').classList.add('hidden');
     } else {
-     
+
       document.getElementById('banner').classList.remove('hidden');
     }
 
