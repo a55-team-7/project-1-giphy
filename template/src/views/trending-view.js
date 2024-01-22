@@ -19,7 +19,7 @@ import { renderFavoriteStatus } from "../events/favorites-events.js";
 export const toTrendingView = (trendingGifs) => {
   return `
    <section class="trending">
-     <h2>Trending</h2>
+     <h2>Popular on TIPHY</h2>
      <div>
        ${trendingGifs.map(toSingleTrendingGifView).join('')}
      </div>

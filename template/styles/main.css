@@ -64,10 +64,20 @@ nav a:hover {
   color:rgb(72, 0, 255);
 }
 
+.trending h2{
+  color: rgb(255, 0, 85);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  font-size: 20px;
+  font-style: italic;
+display: inline-table;
+  margin-left: 80px; /* Adjust the value as needed */
+}
+
 #container {
   grid-area: container;
-  padding: 50px;
-  top: 300px;
+  padding: 100px;
+  left:50%;
   justify-content: space-evenly;
   color: white;
 }
@@ -154,61 +164,48 @@ span.favorite:hover {
 /* End homepage styles */
 
 
-/* Categories styles */
+/* Gif styles */
 
-#categories {
-  padding: 50px;
+#gifs {
+  padding: 40px;
 }
 
-#categories h1 {
-  color: rgb(187, 135, 255);
-}
-
-#categories div.content {
-  font-size: 1.25em;
-}
-
-div.category {
-  display: inline-block;
-  width: 20%;
-  margin: 1%;
-  padding: 1%;
-  border: 1px solid rgb(97, 71, 97);
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
-  text-align: center;
-}
-
-#categories button {
+#gifs h1 {
+  color: rgba(174, 43, 255, 0.851);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
   font-size: 20px;
-  padding: 5px;
-  color: rgb(187, 135, 255);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid black;
-  cursor: pointer;
+  font-style: italic;
+  display: inline;
+  
 }
 
-#categories button:hover {
-  color: white;
+#total-liked {
+  color:rgb(255, 0, 51);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: right;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+  display: inline;
+  margin-left: 550px;
+  border: 0px; /* Add border style */
+  border-radius: 10px;
+  padding: 7px 12px; /* Add padding */
+  background-color:blue; /* Add background color */
+  cursor: pointer; /* Add cursor style */
 }
 
-/* End categories styles */
-
-
-/* Movies styles */
-
-#movies {
-  padding: 50px;
-}
-
-#movies h1 {
-  color: rgb(187, 135, 255);
-}
-
-#movies div.content {
+#gifs div.content {
   font-size: 1.25em;
-  text-align: center;
+  text-align: right;
+}
+
+#random-text {
+  font-size: 1.25em;
+  text-align: left;
+  color:crimson;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 div.movie {
@@ -253,7 +250,7 @@ div.movie img {
 
 /* Single movie styles */
 
-div.movie-detailed {
+div.gif-detailed {
   padding: 20px;
   border: 1px solid rgb(97, 71, 97);
   background-color: rgba(0, 0, 0, 0.5);
@@ -262,7 +259,7 @@ div.movie-detailed {
   width: 100%;
 }
 
-div.movie-detailed p {
+div.gif-detailed p {
   font-size: 1.25em;
   color: #eee;
 }
@@ -449,6 +446,10 @@ div .cursor-hover li {
   .gif-container:hover img {
     filter: brightness(80%) blur(2px);
     color: rgba(247, 0, 255, 0.5);
+  }
+
+  li{
+    display: inline-block;
   }
 
 
