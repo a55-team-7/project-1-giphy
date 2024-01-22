@@ -28,7 +28,7 @@ const chooseRandomOrFavorite = (favoriteGifs, randomGif) => {
     return `${favoriteGifs.map(toGifSimple)}`;
   } else {
     return `
-    You don't have any favorites yet. Here's are random suggestion:
+    <p> You don't have any favorites yet. Here's are random suggestion: </p>
     ${toGifSimple(randomGif)}
     `;
   }
