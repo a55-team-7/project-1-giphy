@@ -5,8 +5,9 @@ html, body {
 }
 
 body {
-  background: url('../images/dark-linen.png') repeat;
+  background: url('../images/background.png') repeat;
   font-family: 'Roboto', sans-serif;
+  border: 0px;
 }
 
 div#app {
@@ -24,36 +25,47 @@ div#app {
   min-height: 100vh;
 }
 
-header {
+header{
   grid-area: header;
-  height: 200px;
-  background: url('../images/banner-top.png');
+  padding: 7px;
 }
 
-nav {
+
+#banner {
   grid-area: menu;
   height: 60px;
-  background: url('../images//banner-bottom.png');
-  font-size: 1.75em;
+  background: url('../images//banner-top.png');
+  font-size: 1.50em;
   line-height: 60px;
-  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
   color: white;
   display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  position: fixed;
+  width: 1100px; /* Set your desired fixed width */
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 900;
+  border-radius: 20px;
+  transition: top 0.3s ease-in-out;
 }
 
+
 nav a {
-  color: rgb(95, 191, 255);
+  color: rgb(255, 0, 85);
   text-decoration: none;
   margin: 0 10px;
 }
 
 nav a:hover {
-  color: rgb(198, 115, 247);
+  color:rgb(72, 0, 255);
 }
 
 #container {
   grid-area: container;
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   color: white;
 }
@@ -70,33 +82,48 @@ footer {
 }
 
 a.active {
-  color: white;
+  color :rgb(72, 0, 255);
   font-weight: bold;
 }
 
 input#search {
   font-size: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(174, 43, 255, 0.851);
   color: white;
-  border: 1px solid gray;
+  border: 0.25px ;
   border-radius: 4px;
   height: 24px;
   flex: 1 0;
   margin: auto;
+  padding: 5px;
+}
+
+input#search:focus {
+  outline: none;
+  color: blue;
+}
+
+#search::placeholder {
+  color: #ffffff;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  /* Add more styles as needed */
 }
 
 span.favorite {
-  padding-left: 10px;
+  
   cursor: pointer;
 }
 
 span.favorite.active {
-  color: rgb(255, 0, 149);
+  color:  rgba(174, 43, 255, 0.851);
 }
 
 span.favorite:hover {
-  color:rgb(187, 135, 255)
+  color:rgb(255, 0, 85);
 }
+
+
 
 /* End template styling */
 
@@ -332,8 +359,92 @@ div.movie-detailed div.movie-info {
 }
 
 .gifs img {
-  width: 100%;
-  justify-content: space-between;
-  height: 75%;
+  width: 50%;
+  height: 45%;
 }
+
+
+div .cursor-hover li {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+}
+
+
+.gif-container {
+  position: relative;
+  /* Other styles as needed */
+}
+
+.view-gif-btn {
+  position: absolute;
+  /* Center the button horizontally and vertically */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Hide the button by default */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+  color:rgb(255, 0, 76);
+  background-color:rgb(72, 0, 255);
+  border:0px;
+  font-size: 16px; /* Adjust the font size as needed */
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;/* Replace "Your Nav Font" with the font used in the nav */
+  padding: 15px 20px; /* Adjust the padding as needed */
+}
+
+.gif-container span {
+  position: absolute;
+  /* Center the button horizontally and vertically */
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Hide the button by default */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color:rgb(255, 0, 76);
+  border:0px;
+  font-size: 16px; /* Adjust the font size as needed */
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;/* Replace "Your Nav Font" with the font used in the nav */
+  padding: 15px 20px; /* Adjust the padding as needed */
+  display:flexbox;
+  
+}
+
+
+.view-gif-btn:hover {
+  color:salmon;
+  background-color: rgb(0, 255, 128);
+}
+
+
+
+.gif-container:hover .view-gif-btn {
+  /* Show the button when the container is hovered */
+  opacity: 100;
+}
+
+.gif-container:hover span {
+  /* Show the button when the container is hovered */
+  opacity: 100;
+}
+
+
+  .gif-container:hover img {
+    filter: brightness(80%) blur(2px);
+    color: rgba(247, 0, 255, 0.5);
+  }
+
+
+/* Masonry grid styles */
+.grid-item { width: 200px; }
+.grid-sizer, .gutter-sizer { width: 50%; }
+
+
 /* End about styles */

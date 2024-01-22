@@ -13,6 +13,7 @@
   "dependencies": {
     "eslint": "^8.56.0",
     "eslint-config-google": "^0.14.0",
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "masonry-layout": "^4.2.2"
   }
 }

@@ -42,6 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+
+
+  function handleScroll() {
+    const currentScrollPos = window.pageYOffset;
+    let prevScrollPos = window.pageYOffset;
+    if (prevScrollPos < currentScrollPos) {
+    
+      document.getElementById('banner').classList.add('hidden');
+    } else {
+     
+      document.getElementById('banner').classList.remove('hidden');
+    }
+
+    prevScrollPos = currentScrollPos;
+  }
+
+  window.onscroll = handleScroll;
+
   loadPage(HOME);
 
 });

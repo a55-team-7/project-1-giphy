@@ -22,7 +22,7 @@ export const API_KEY = 'GB1eH419EgtMMzttQ7t1wOClKAcArPG4';
 
 export const trendingURL = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=25&offset=0&rating=g`;
 
-export const getTrendingURL = (limit = 25, offset = 0) => `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=${limit}&offset=${offset}&rating=g`;
+export const getTrendingURL = (limit = 35, offset = 0) => `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=${limit}&offset=${offset}&rating=g`;
 
 export const randomURL = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=&rating=g`;
 
