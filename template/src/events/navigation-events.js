@@ -12,6 +12,11 @@ import { toUploadedView } from '../views/uploaded-view.js';
 import { getUploadedIds } from '../data/uploaded.js';
 
 // public API
+/**
+ * Loads the specified page and returns the rendered content.
+ * @param {string} page - The page to load.
+ * @returns {HTMLElement|null} - The rendered content of the page, or null if the page is not supported.
+ */
 export const loadPage = (page = '') => {
 
   switch (page) {
@@ -46,26 +51,32 @@ export const loadPage = (page = '') => {
 
 };
 
+/**
+ * Renders the details of a GIF by its ID.
+ * 
+ * @param {string|null} id - The ID of the GIF to render. If null, it will render the default GIF.
+ * @returns {Promise<void>} - A promise that resolves when the GIF details are rendered.
+ */
 export const renderGifDetails = async(id = null) => {
   const gif = await loadSingleGifById(id);
 
   q(CONTAINER_SELECTOR).innerHTML = toSingleGifView(gif);
 };
 
-//NOT SURE BUT I THINK IT NEEDS TO BE REMOVED
-// export const renderCategory = (categoryId = null) => {
-//   const category = loadCategory(categoryId);
-//   const movies = loadMovies(category.id);
-
-//   q(CONTAINER_SELECTOR).innerHTML = toMoviesFromCategoryView(category, movies);
-// };
 
 // private functions
 
+/**
+ * Renders the home view by updating the content of the container element.
+ */
 const renderHome = () => {
   q(CONTAINER_SELECTOR).innerHTML = toHomeView();
 };
 
+/**
+ * Renders the trending gifs on the page.
+ * @returns {Promise<void>} A promise that resolves when the rendering is complete.
+ */
 const renderTrending = async() => {
   const trendingGifs = await loadTrendingGifs();
 
@@ -74,10 +85,17 @@ const renderTrending = async() => {
 
 //Upload needs to be implemented
 
+/**
+ * Renders the upload view by updating the innerHTML of the container element.
+ */
 const renderUpload = () => {
   q(CONTAINER_SELECTOR).innerHTML = toUploadView();
 }
 
+/**
+ * Renders the uploaded gifs.
+ * @returns {Promise<void>} A promise that resolves when the rendering is complete.
+ */
 const renderUploaded = async() => {
   const uploadedIds = getUploadedIds();
   const gifs = await Promise.all(uploadedIds.map(id => loadSingleGifById(id)));
@@ -85,6 +103,10 @@ const renderUploaded = async() => {
   q(CONTAINER_SELECTOR).innerHTML = toUploadedView(gifs);
 };
 
+/**
+ * Renders the favorites view by loading favorite GIFs and a random GIF.
+ * @returns {Promise<void>} A promise that resolves when the favorites view is rendered.
+ */
 const renderFavorites = async() => {
   const favorites = getFavorites();
   const favoriteGifs = await Promise.all(favorites.map(id => loadSingleGifById(id)));
@@ -93,6 +115,9 @@ const renderFavorites = async() => {
   q(CONTAINER_SELECTOR).innerHTML = toFavoritesView(favoriteGifs, randomGif);
 };
 
+/**
+ * Renders the about view by updating the innerHTML of the container element.
+ */
 const renderAbout = () => {
   q(CONTAINER_SELECTOR).innerHTML = toAboutView();
 };

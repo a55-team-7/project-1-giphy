@@ -2,6 +2,12 @@ import { uploadURL, API_KEY } from "../common/constants.js";
 import { addUpload, getUploadedIds } from "../data/uploaded.js";
 import { q } from "./helpers.js";
 
+/**
+ * Toggles the upload status of a GIF.
+ * If the GIF ID is not already in the list of uploaded IDs, it adds it.
+ * 
+ * @param {string} gifId - The ID of the GIF.
+ */
 export const toggleUploadStatus = (gifId) => {
     const uploadedIds = getUploadedIds();
     

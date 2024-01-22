@@ -1,3 +1,7 @@
+/**
+ * Generates the HTML markup for the upload view.
+ * @returns {string} The HTML markup for the upload view.
+ */
 export const toUploadView = () => `
 <div class="update">
   <div class="content">

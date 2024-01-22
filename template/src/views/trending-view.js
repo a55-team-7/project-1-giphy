@@ -27,6 +27,11 @@ export const toTrendingView = (trendingGifs) => {
  `;
 };
 
+/**
+ * Converts a trending item object into a single trending GIF view.
+ * @param {Object} trendingItem - The trending item object.
+ * @returns {string} - The HTML string representing the single trending GIF view.
+ */
 const toSingleTrendingGifView = (trendingItem) => {
   return `
    <li>

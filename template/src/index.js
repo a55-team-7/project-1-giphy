@@ -3,7 +3,7 @@ import { toggleFavoriteStatus } from './events/favorites-events.js';
 import { q } from './events/helpers.js';
 import { loadPage,  renderGifDetails } from './events/navigation-events.js';
 import { renderSearchItems } from './events/search-events.js';
-import { toggleUploadStatus, uploadGif } from './events/upload-events.js';
+import {uploadGif } from './events/upload-events.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // add global listener
@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+  /**
+   * Handles the scroll event and toggles the visibility of the banner element based on the scroll direction.
+   */
   function handleScroll() {
     const currentScrollPos = window.pageYOffset;
     let prevScrollPos = window.pageYOffset;
