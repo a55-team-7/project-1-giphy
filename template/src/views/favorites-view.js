@@ -11,7 +11,7 @@ export const toFavoritesView = (favoriteGifs, randomGif) => `
   <h1>You can see your favourites here! </h1>
   <div class="content">
   <p>Total liked: ${favoriteGifs.length}</p>
-  ${chooseRandomOrFavourite(favoriteGifs, randomGif)}
+  ${chooseRandomOrFavorite(favoriteGifs, randomGif)}
   </div>
 </div>
 `;
@@ -23,10 +23,13 @@ export const toFavoritesView = (favoriteGifs, randomGif) => `
  * @param {Object} randomGif - The random GIF object.
  * @returns {(Array|Object)} - An array of simplified GIF objects or a single simplified GIF object.
  */
-const chooseRandomOrFavourite = (favoriteGifs, randomGif) => {
+const chooseRandomOrFavorite = (favoriteGifs, randomGif) => {
   if (favoriteGifs.length > 0) {
-    return favoriteGifs.map(toGifSimple);
+    return `${favoriteGifs.map(toGifSimple)}`;
   } else {
-    return toGifSimple(randomGif);
+    return `
+    You don't have any favorites yet. Here's are random suggestion:
+    ${toGifSimple(randomGif)}
+    `;
   }
 }
