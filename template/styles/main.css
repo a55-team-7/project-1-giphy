@@ -66,7 +66,9 @@ nav a:hover {
 
 #container {
   grid-area: container;
-  padding: 20px;
+  padding: 50px;
+  top: 300px;
+  justify-content: space-evenly;
   color: white;
 }
 
@@ -434,6 +436,14 @@ div .cursor-hover li {
   /* Show the button when the container is hovered */
   opacity: 100;
 }
+
+
+  .gif-container img {
+   border-radius: 10px;
+   border-color: blue;
+   border-width: 1px;
+   border-style:double;
+  }
 
 
   .gif-container:hover img {

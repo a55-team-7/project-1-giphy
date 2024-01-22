@@ -26,3 +26,8 @@ export const renderFavoriteStatus = (gifId) => {
     ? `<span class="favorite active" data-gif-id="${gifId}">${FULL_HEART}</span>`
     : `<span class="favorite" data-gif-id="${gifId}">${EMPTY_HEART}</span>`;
 };
+
+export const getTotalLiked = () => {
+  const favorites = getFavorites();
+  return favorites.length;
+}
