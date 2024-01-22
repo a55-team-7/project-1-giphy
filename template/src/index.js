@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // search events
   q('input#search').addEventListener('input', e => {
-    renderSearchItems(e.target.value);
+    renderSearchItems(e.target.value);                       //if enter is pressed, the search is executed
   });
 
 
