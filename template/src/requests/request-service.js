@@ -1,22 +1,22 @@
 import { getGifByIdURL, getSearchURL, getTrendingURL, getRandomURL } from '../common/constants.js';
 
 /**
-*
-* @return {Promise<Array<{
-* id: string,
-* rating: string,
-* title: string,
-* images: {
-*  fixed_width: {
-*      url: string,
-*  },
-* },
-* user: {
-*  avatar_url: string,
-*  username: string,
-* },
-* }>>} - array of trending gifs
-*/
+ *
+ * @return {Promise<Array<{
+ * id: string,
+ * rating: string,
+ * title: string,
+ * images: {
+ *  fixed_width: {
+ *      url: string,
+ *  },
+ * },
+ * user: {
+ *  avatar_url: string,
+ *  username: string,
+ * },
+ * }>>} - array of trending gifs
+ */
 export const loadTrendingGifs = async () => {
   const response = await fetch(getTrendingURL(30));
   const result = await response.json();

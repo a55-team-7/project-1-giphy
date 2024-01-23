@@ -1,28 +1,11 @@
 /* Template styling */
 
-html, body {
-  margin: 0;
-}
+
 
 body {
   background: url('../images/background.png') repeat;
   font-family: 'Roboto', sans-serif;
-  border: 0px;
-}
-
-div#app {
-  display: grid;
-  max-width: 1400px;
-  margin: 0 auto;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto auto 1fr auto;
-  grid-template-areas: 
-    'header header header'
-    'menu menu menu'
-    'container container container'
-    'footer footer footer'
-  ;
-  min-height: 100vh;
+  border: 10px;
 }
 
 header{
@@ -43,9 +26,10 @@ header{
   display: flex;
   justify-content: center; /* Center the content horizontally */
   align-items: center; /* Center the content vertically */
+  justify-self: center;
   position: fixed;
   width: 1100px; /* Set your desired fixed width */
-  top: 20px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%); /* Center horizontally */
   z-index: 900;
@@ -65,21 +49,24 @@ nav a:hover {
 }
 
 .trending h2{
-  color: rgb(255, 0, 85);
+  color: rgb(0, 255, 132);
   font-family: 'Courier New', Courier, monospace;
   text-align: left;
-  font-size: 20px;
+  font-size: 25px;
   font-style: italic;
-display: inline-table;
-  margin-left: 80px; /* Adjust the value as needed */
+  display: flex;
+  margin-top: 0px;
+ /* Adjust the value as needed */
 }
 
 #container {
-  grid-area: container;
-  padding: 100px;
-  left:50%;
-  justify-content: space-evenly;
-  color: white;
+ margin: 100px auto; /* Top and bottom margin of 100px, left and right margin auto for centering */
+  padding: 30px;
+  width: 80%; /* Adjust as needed */
+  display: block;
+  border-radius: 20px;
+  justify-self: center;
+  justify-content: center;
 }
 
 footer {
@@ -148,7 +135,7 @@ span.favorite:hover {
 
 
 #home {
-  padding: 50px;
+  padding: 10px;
 }
 
 #home h1 {
@@ -166,9 +153,7 @@ span.favorite:hover {
 
 /* Gif styles */
 
-#gifs {
-  padding: 40px;
-}
+
 
 #gifs h1 {
   color: rgba(174, 43, 255, 0.851);
@@ -497,8 +482,26 @@ div .cursor-hover li {
 
 
 /* Masonry grid styles */
-.grid-item { width: 200px; }
-.grid-sizer, .gutter-sizer { width: 50%; }
+.grid {
+  width: 100%;
+ padding-top: 60%;
+ padding-left: 50%;
+
+  background: #a200ff80;
+
+}
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%; /* For a three column layout */
+}
+
+.gutter-sizer {
+  width: 2%; /* For a 2% gutter */
+}
 
 
-/* End about styles */
+.grid-item {
+  margin-bottom: 10px;
+  float: left;
+}
