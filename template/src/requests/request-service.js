@@ -1,8 +1,8 @@
 import { getGifByIdURL, getSearchURL, getTrendingURL, getRandomURL } from '../common/constants.js';
 
 /**
-* 
-* @returns {Promise<Array<{
+*
+* @return {Promise<Array<{
 * id: string,
 * rating: string,
 * title: string,
@@ -17,7 +17,7 @@ import { getGifByIdURL, getSearchURL, getTrendingURL, getRandomURL } from '../co
 * },
 * }>>} - array of trending gifs
 */
-export const loadTrendingGifs = async() => {
+export const loadTrendingGifs = async () => {
   const response = await fetch(getTrendingURL(30));
   const result = await response.json();
   return result.data;
@@ -25,9 +25,9 @@ export const loadTrendingGifs = async() => {
 
 /**
  * Loads a random GIF by making an asynchronous request.
- * @returns {Promise<Object>} A promise that resolves to the data of the random GIF.
+ * @return {Promise<Object>} A promise that resolves to the data of the random GIF.
  */
-export const loadRandomGif = async() => {
+export const loadRandomGif = async () => {
   const response = await fetch(getRandomURL());
   const result = await response.json();
   return result.data;
@@ -36,18 +36,18 @@ export const loadRandomGif = async() => {
 /**
  * Loads a single GIF by its ID.
  * @param {string} id - The ID of the GIF.
- * @returns {Promise<Object>} - A promise that resolves to the data of the loaded GIF.
+ * @return {Promise<Object>} - A promise that resolves to the data of the loaded GIF.
  */
-export const loadSingleGifById = async(id) => {
+export const loadSingleGifById = async (id) => {
   const response = await fetch(getGifByIdURL(id));
   const result = await response.json();
-  return result.data; 
+  return result.data;
 };
 
 /**
  * Loads search GIFs based on the provided search term.
  * @param {string} searchTerm - The search term to be used for searching GIFs.
- * @returns {Promise<Array>} - A promise that resolves to an array of search results.
+ * @return {Promise<Array>} - A promise that resolves to an array of search results.
  */
 export const loadSearchGif = async (searchTerm = '') => {
   const response = await fetch(getSearchURL(25, 0, searchTerm));

@@ -16,11 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
       loadPage(event.target.getAttribute('data-page'));
     }
 
-    // show category events
-    // if (event.target.classList.contains('view-category-btn')) {
-    //   renderCategory(+event.target.getAttribute('data-category-id'));
-    // }
-
     // show movie events
     if (event.target.classList.contains('view-gif-btn')) {
       renderGifDetails(event.target.getAttribute('data-gif-id'));
@@ -31,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleFavoriteStatus(event.target.getAttribute('data-gif-id'));
     }
 
-    //toggle upload event
+    // toggle upload event
     if (event.target.classList.contains('update-submit')) {
       uploadGif(event);
     }
@@ -40,13 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // search events
   q('input#search').addEventListener('keyup', e => {
     const searchTerm = e.target.value.trim();
-  
+
     if (e.key === 'Enter' || searchTerm === '') {
       renderSearchItems(searchTerm);
     }
   });
-
-
 
 
   /**

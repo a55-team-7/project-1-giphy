@@ -6,7 +6,7 @@ import { toGifSimple } from './gif-views.js';
  *
  * @param {Array} gifs - The array of GIFs to display.
  * @param {string} searchTerm - The search term used to find the GIFs.
- * @returns {string} - The HTML string representing the search view.
+ * @return {string} - The HTML string representing the search view.
  */
 export const toSearchView = (gifs, searchTerm) => `
 <div id="search-gif">

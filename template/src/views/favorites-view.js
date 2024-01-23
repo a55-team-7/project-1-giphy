@@ -1,11 +1,11 @@
-import { toGifSimple } from "./gif-views.js";
+import { toGifSimple } from './gif-views.js';
 
 /**
  * Converts an array of favorite gifs and a random gif into a HTML string representing the favorites view.
  * @param {Array} favoriteGifs - The array of favorite gifs.
  * @param {Object} randomGif - The random gif object.
  * @returns {string} The HTML string representing the favorites view.
- */  /*${favoriteGifs.map(toGifSimple) || `<p>Like some gifs to see them here.</p><p>Loading random:</p>${toGifSimple(randomGif)}`}*/
+ */ /* ${favoriteGifs.map(toGifSimple) || `<p>Like some gifs to see them here.</p><p>Loading random:</p>${toGifSimple(randomGif)}`}*/
 export const toFavoritesView = (favoriteGifs, randomGif) => `
 <div id="favorite-gifs">
   <div class="header-row"
@@ -22,7 +22,7 @@ export const toFavoritesView = (favoriteGifs, randomGif) => `
  * otherwise returns a single simplified GIF object.
  * @param {Array} favoriteGifs - The array of favorite GIF objects.
  * @param {Object} randomGif - The random GIF object.
- * @returns {(Array|Object)} - An array of simplified GIF objects or a single simplified GIF object.
+ * @return {(Array|Object)} - An array of simplified GIF objects or a single simplified GIF object.
  */
 const chooseRandomOrFavorite = (favoriteGifs, randomGif) => {
   if (favoriteGifs.length > 0) {
@@ -33,4 +33,4 @@ const chooseRandomOrFavorite = (favoriteGifs, randomGif) => {
     ${toGifSimple(randomGif)}
     `;
   }
-}
+};

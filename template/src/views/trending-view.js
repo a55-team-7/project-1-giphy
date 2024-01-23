@@ -1,4 +1,4 @@
-import { renderFavoriteStatus } from "../events/favorites-events.js";
+import { renderFavoriteStatus } from '../events/favorites-events.js';
 
 /**
  * @param {Array<{
@@ -15,6 +15,7 @@ import { renderFavoriteStatus } from "../events/favorites-events.js";
 *  username: string,
 * },
 * }>} trendingGifs
+ * @return {string} - The HTML string representing the overall trending GIF view.
 */
 export const toTrendingView = (trendingGifs) => {
   return `
@@ -30,9 +31,9 @@ export const toTrendingView = (trendingGifs) => {
 /**
  * Converts a trending item object into a single trending GIF view.
  * @param {Object} trendingItem - The trending item object.
- * @returns {string} - The HTML string representing the single trending GIF view.
+ * @return {string} - The HTML string representing the single trending GIF view.
  */
-export const toSingleTrendingGifView = (trendingItem) => {
+const toSingleTrendingGifView = (trendingItem) => {
   return `
    <li>
    <div class="gif-container">

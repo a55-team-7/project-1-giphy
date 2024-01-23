@@ -1,4 +1,4 @@
-let uploaded = JSON.parse(localStorage.getItem('uploaded')) || [];
+const uploaded = JSON.parse(localStorage.getItem('uploaded')) || [];
 
 /**
  * Adds a GIF ID to the uploaded array and stores it in local storage.
@@ -15,6 +15,6 @@ export const addUpload = (gifId) => {
 
 /**
  * Retrieves an array of uploaded IDs.
- * @returns {Array} An array of uploaded IDs.
+ * @return {Array} An array of uploaded IDs.
  */
 export const getUploadedIds = () => [...uploaded];
