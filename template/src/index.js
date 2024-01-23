@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 import { HOME } from './common/constants.js';
 import { toggleFavoriteStatus } from './events/favorites-events.js';
 import { q } from './events/helpers.js';
@@ -39,6 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Enter' || searchTerm === '') {
       renderSearchItems(searchTerm);
     }
+  });
+
+  q('#search-btn').addEventListener('click', () => {
+    const searchTerm = q('#search').value.trim();
+    renderSearchItems(searchTerm);
   });
 
 

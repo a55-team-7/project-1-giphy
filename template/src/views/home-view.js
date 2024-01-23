@@ -1,6 +1,6 @@
 /**
  * Generates the HTML markup for the home view.
- * @returns {string} The HTML markup for the home view.
+ * @return {string} The HTML markup for the home view.
  */
 export const toHomeView = () => `
 <div id="home">

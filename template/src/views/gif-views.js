@@ -4,7 +4,7 @@ import { renderFavoriteStatus } from '../events/favorites-events.js';
  * Converts an array of gifs into a trending view HTML string.
  *
  * @param {Array} gifs - The array of gifs.
- * @returns {string} - The HTML string representing the trending view.
+ * @return {string} - The HTML string representing the trending view.
  */
 export const toGifsFromTrendingView = (gifs) => `
 <div id="gifs-trending-view">
@@ -19,7 +19,7 @@ export const toGifsFromTrendingView = (gifs) => `
  * Converts a GIF object into a single GIF view HTML string.
  *
  * @param {object} gif - The GIF object.
- * @returns {string} The HTML string representing the single GIF view.
+ * @return {string} The HTML string representing the single GIF view.
  */
 export const toSingleGifView = (gif) => `
 <div id="gif">
@@ -34,7 +34,7 @@ export const toSingleGifView = (gif) => `
  * Converts a GIF object into a simple HTML representation.
  *
  * @param {Object} gif - The GIF object.
- * @returns {string} The HTML representation of the GIF.
+ * @return {string} The HTML representation of the GIF.
  */
 export const toGifSimple = (gif) => `
 <div class="gifs">
@@ -48,7 +48,7 @@ export const toGifSimple = (gif) => `
  * Converts a GIF object into a detailed HTML representation.
  *
  * @param {Object} gif - The GIF object to convert.
- * @returns {string} The HTML representation of the GIF.
+ * @return {string} The HTML representation of the GIF.
  */
 export const toGifDetailed = (gif) => `
 <div class="gif-detailed">

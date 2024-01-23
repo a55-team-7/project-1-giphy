@@ -370,6 +370,23 @@ div .update {
   gap: 10px; 
 }
 
+.search-input {
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+#search-btn {
+  padding: 8px 10px;
+  background-color:white;
+  color: white;
+  border: none;
+  cursor: pointer;
+  top: -1px;
+  position: relative;
+
+}
+
 .gifs {
   display: flex;
   align-items: center;
