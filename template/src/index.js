@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleFavoriteStatus(event.target.getAttribute('data-gif-id'));
     }
 
+    //toggle upload event
     if (event.target.classList.contains('update-submit')) {
       uploadGif(event);
     }

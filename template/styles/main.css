@@ -314,10 +314,36 @@ div.movie-detailed div.movie-info {
   }
 }
 
+div .update {
+  font-size: 25px;
+  color: navy;
+
+  button, input{
+    font-size: 25px;
+  }
+}
+
+#uploaded-gifs .gifs {
+  padding: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+#favorite-gifs .header-row {
+  justify-content: space-between;
+  font-size: 30px;
+  text-align: left;
+}
+
+#favorite-gifs .gifs {
+  padding: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
 #search-gif {
   display: inline-flexbox;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.692);
 }
 
 #search-gif h1 {

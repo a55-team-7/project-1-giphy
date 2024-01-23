@@ -16,6 +16,13 @@ export const toggleUploadStatus = (gifId) => {
     }
 };
 
+
+/**
+ * Uploads the gif
+ * If the upload is successful, the gif's uploaded status is triggered
+ * 
+ * @param event - the upload gif event
+ */
 export const uploadGif = (event) => {
 
     event.preventDefault();

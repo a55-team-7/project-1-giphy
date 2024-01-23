@@ -32,7 +32,7 @@ export const toTrendingView = (trendingGifs) => {
  * @param {Object} trendingItem - The trending item object.
  * @returns {string} - The HTML string representing the single trending GIF view.
  */
-const toSingleTrendingGifView = (trendingItem) => {
+export const toSingleTrendingGifView = (trendingItem) => {
   return `
    <li>
    <div class="gif-container">

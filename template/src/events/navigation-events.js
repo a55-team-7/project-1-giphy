@@ -83,7 +83,6 @@ const renderTrending = async() => {
   q(CONTAINER_SELECTOR).innerHTML =  toTrendingView(trendingGifs);
 };
 
-//Upload needs to be implemented
 
 /**
  * Renders the upload view by updating the innerHTML of the container element.

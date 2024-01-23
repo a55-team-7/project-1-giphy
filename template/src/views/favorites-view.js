@@ -7,8 +7,10 @@ import { toGifSimple } from "./gif-views.js";
  * @returns {string} The HTML string representing the favorites view.
  */  /*${favoriteGifs.map(toGifSimple) || `<p>Like some gifs to see them here.</p><p>Loading random:</p>${toGifSimple(randomGif)}`}*/
 export const toFavoritesView = (favoriteGifs, randomGif) => `
-<div id="gifs">
+<div id="favorite-gifs">
+  <div class="header-row"
   <h1>You can see your favourites here! </h1>  <p id="total-liked">Total liked: ${favoriteGifs.length}</p>
+  </div>
   <div class="content">
   ${chooseRandomOrFavorite(favoriteGifs, randomGif)}
   </div>

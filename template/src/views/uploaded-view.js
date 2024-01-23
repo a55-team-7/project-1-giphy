@@ -6,7 +6,7 @@ import { toGifSimple } from "./gif-views.js";
  * @returns {string} The HTML string representing the uploaded view.
  */
 export const toUploadedView = (uploadedGifs) => `
-<div id="gifs">
+<div id="uploaded-gifs">
   <h1>Uploaded Gifs:</h1>
   <div class="content">
     ${uploadedGifs.map(toGifSimple).join('\n') || '<p>Upload some gifs to see them here.</p>'}
