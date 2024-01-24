@@ -210,17 +210,11 @@ span.like {
 }
 
 #favorite-gifs .gifs {
-  padding: 30px;
+  padding: 60px;
   display: inline-block;
   text-align: center;
 }
 
-.favourite-gifs .content{
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  flex-direction: column;
-}
 
 #total-liked {
   color:rgb(0, 255, 132);
