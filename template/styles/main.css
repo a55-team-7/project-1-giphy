@@ -265,10 +265,14 @@ span.like {
 
 
 /* About styles */
-#about {
-  padding: 50px;
-}
 
+#about .content{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
 
 #about h1 {
   color: rgb(187, 135, 255);
