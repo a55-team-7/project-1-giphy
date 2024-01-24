@@ -38,7 +38,7 @@ export const toSingleGifView = (gif) => `
  */
 export const toGifSimple = (gif) => `
 <div class="gifs">
-  <h1 class="gif-title">${gif.title || 'Untitled'}</h1>
+  <h1 class="gif-title" id="heading">${gif.title || 'Untitled'}</h1>
   <img src="${gif.images.fixed_width.url}"><br>
   <button class="view-gif-btn" data-gif-id="${gif.id}">View details</button>  ${renderFavoriteStatus(gif.id)}
 </div>
@@ -56,7 +56,6 @@ export const toGifDetailed = (gif) => `
     <img src="${gif.images.fixed_width.url}"><br>
   </div>
   <div class="gif-info">
-    <h2>${gif.title}</h2>
     <h3>Uploaded by: ${gif.user.username}</h3>
     <h3>Uploaded: ${gif.import_datetime}</h3>
   </div>
