@@ -9,10 +9,10 @@ import { toGifSimple } from './gif-views.js';
  * @return {string} - The HTML string representing the search view.
  */
 export const toSearchView = (gifs, searchTerm) => `
-<div id="search-gif">
-  <h1>Gifs found for "${searchTerm}":</h1>
-  <div class="content">
+<div class="trending">
+  <h2>Gifs found for "${searchTerm}":</h2>
+  <ul class="gif-list">
     ${gifs.map(toGifSimple).join('\n') || '<p>No GIFs found. Try a different search term</p>'}
-  </div>
+  </ul>
 </div>
 `;
