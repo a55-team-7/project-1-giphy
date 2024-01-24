@@ -9,9 +9,7 @@ import { q } from './helpers.js';
  */
 export const toggleFavoriteStatus = (gifId) => {
   const favorites = getFavorites();
-  console.log(`${gifId}`);
   const heartSpan = q(`span[data-gif-id="${gifId}"]`);
-  console.log(heartSpan);
 
   if (favorites.includes(gifId)) {
     removeFavorite(gifId);
