@@ -48,21 +48,7 @@ nav a:hover {
   color:rgb(72, 0, 255);
 }
 
-.trending h2{
-  color: rgb(0, 255, 132);
-  font-family: 'Courier New', Courier, monospace;
-  text-align: left;
-  font-size: 25px;
-  font-style: italic;
-  display: flex;
-  margin-top: 0px;
-}
 
-.trending-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
 
 #container {
  margin: 100px auto; /* Top and bottom margin of 100px, left and right margin auto for centering */
@@ -91,30 +77,9 @@ a.active {
   color :rgb(72, 0, 255);
   font-weight: bold;
 }
+/* End template styling */
 
-input#search {
-  font-size: 20px;
-  background-color: rgba(174, 43, 255, 0.851);
-  color: white;
-  border: 0.25px ;
-  border-radius: 4px;
-  height: 24px;
-  flex: 1 0;
-  margin: auto;
-  padding: 5px;
-}
-
-input#search:focus {
-  outline: none;
-  color: blue;
-}
-
-#search::placeholder {
-  color: #ffffff;
-  font-size: 15px;
-  font-family: 'Courier New', Courier, monospace;
-  /* Add more styles as needed */
-}
+/*fav toggle styles */
 
 span.favorite {
   
@@ -132,7 +97,37 @@ span.favorite:hover {
 span.like {
   cursor: pointer;
 }
-/* End template styling */
+
+/* End fav toggle styles */
+
+
+/*Trending styles */
+
+.trending h2{
+  color: rgb(0, 255, 132);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  font-size: 25px;
+  font-style: italic;
+  display: flex;
+  margin-top: 0px;
+}
+.trending li {
+  padding: 30px;
+  display: inline-block;
+  text-align: center;
+  p {
+    font-size: 40px;
+  }
+}
+
+.trending-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* End trending styles */
 
 /*Update styles */
 
@@ -264,10 +259,132 @@ span.like {
   font-style: italic;
   display: inline;
 }
+/* End favourite gif styles */
 
 
 
-/* Single gifs styles */
+
+/* About styles */
+#about {
+  padding: 50px;
+}
+
+
+#about h1 {
+  color: rgb(187, 135, 255);
+  margin-bottom: 50px;
+}
+
+#about h2 {
+  color: rgb(229, 210, 255);
+}
+/* End about styles */
+
+
+
+
+/* Updated styles */
+
+div .update {
+  font-size: 25px;
+  color: navy;
+
+  button, input{
+    font-size: 25px;
+  }
+}
+
+#uploaded-gifs .gifs {
+  padding: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+#uploaded-gifs h1{
+  color: rgb(0, 255, 132);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  font-size: 25px;
+  font-style: italic;
+  display: flex;
+  margin-top: 0px;
+}
+
+/* End updated styles */
+
+
+/* Search gif styles */
+
+#search-gif {
+  display: inline-flexbox;
+  padding: 10px;
+}
+
+#search-gif h1 {
+  display: flex;
+  color: white;
+}
+
+#search-gif p {
+  display: flex;
+  color: white;
+  font-size: 20px;
+  margin: 50px;
+}
+
+#search-gif .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#search-gif .content {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px; 
+}
+
+.search-input {
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+input#search {
+  font-size: 20px;
+  background-color: rgba(174, 43, 255, 0.851);
+  color: white;
+  border: 0.25px ;
+  border-radius: 4px;
+  height: 24px;
+  flex: 1 0;
+  margin: auto;
+  padding: 5px;
+}
+
+input#search:focus {
+  outline: none;
+  color: blue;
+}
+
+#search::placeholder {
+  color: #ffffff;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  /* Add more styles as needed */
+}
+
+#search-btn {
+  background-color:rgb(0, 255, 132);
+  border: none;
+  cursor: pointer;
+  top: -1px;
+  position: relative;
+}
+/* End search gif styles */
+
+
+/* Single gif styles */
 #gifs h1 {
   color: rgba(174, 43, 255, 0.851);
   font-family: 'Courier New', Courier, monospace;
@@ -321,92 +438,6 @@ span.like {
   border-width: 1px;
   border-style:double;
 }
-/* End gifs styles */
-
-
-
-/* About styles */
-#about {
-  padding: 50px;
-}
-
-
-#about h1 {
-  color: rgb(187, 135, 255);
-  margin-bottom: 50px;
-}
-
-#about h2 {
-  color: rgb(229, 210, 255);
-}
-
-.trending li {
-  padding: 30px;
-  display: inline-block;
-  text-align: center;
-  p {
-    font-size: 40px;
-  }
-}
-
-div .update {
-  font-size: 25px;
-  color: navy;
-
-  button, input{
-    font-size: 25px;
-  }
-}
-
-#uploaded-gifs .gifs {
-  padding: 30px;
-  display: inline-block;
-  text-align: center;
-}
-
-
-#search-gif {
-  display: inline-flexbox;
-  padding: 10px;
-}
-
-#search-gif h1 {
-  display: flex;
-  color: white;
-}
-
-#search-gif p {
-  display: flex;
-  color: white;
-  font-size: 20px;
-  margin: 50px;
-}
-
-#search-gif .content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-#search-gif .content {
-  display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 10px; 
-}
-
-.search-input {
-  background-position: 10px center;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-}
-
-#search-btn {
-  background-color:rgb(0, 255, 132);
-  border: none;
-  cursor: pointer;
-  top: -1px;
-  position: relative;
-}
 
 .gifs {
   display: flex;
@@ -439,43 +470,38 @@ div .cursor-hover li {
 
 .gif-container {
   position: relative;
-  /* Other styles as needed */
 }
 
 .view-gif-btn {
   position: absolute;
-  /* Center the button horizontally and vertically */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Hide the button by default */
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 10px;
   color:rgb(255, 0, 76);
   background-color:rgb(72, 0, 255);
   border:0px;
-  font-size: 16px; /* Adjust the font size as needed */
+  font-size: 16px; 
   font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;/* Replace "Your Nav Font" with the font used in the nav */
-  padding: 15px 20px; /* Adjust the padding as needed */
+  font-family: 'Courier New', Courier, monospace;
+  padding: 15px 20px; 
 }
 
 .gif-container span {
   position: absolute;
-  /* Center the button horizontally and vertically */
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Hide the button by default */
   opacity: 0;
   transition: opacity 0.3s ease;
   color:rgb(255, 0, 76);
   border:0px;
-  font-size: 16px; /* Adjust the font size as needed */
+  font-size: 16px; 
   font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;/* Replace "Your Nav Font" with the font used in the nav */
-  padding: 15px 20px; /* Adjust the padding as needed */
+  font-family: 'Courier New', Courier, monospace;
+  padding: 15px 20px; 
   display:flexbox;
   
 }
@@ -489,12 +515,10 @@ div .cursor-hover li {
 
 
 .gif-container:hover .view-gif-btn {
-  /* Show the button when the container is hovered */
   opacity: 100;
 }
 
 .gif-container:hover span {
-  /* Show the button when the container is hovered */
   opacity: 100;
 }
 
@@ -515,6 +539,7 @@ div .cursor-hover li {
   li{
     display: inline-block;
   }
+/* End single gif styles */
 
 
 /* Masonry grid styles */
@@ -530,16 +555,15 @@ div .cursor-hover li {
 
 .grid-sizer,
 .grid-item {
-  width: 33.333%; /* For a three column layout */
+  width: 33.333%; 
   height: auto;
   padding: 0%;
   margin-bottom: 100px;
 }
 
 .gutter-sizer {
-  width: 2%; /* For a 2% gutter */
+  width: 2%; 
 }
-
 
 .grid-item {
   margin-bottom: 10px;
