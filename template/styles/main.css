@@ -79,6 +79,8 @@ a.active {
 }
 /* End template styling */
 
+
+
 /*fav toggle styles */
 
 span.favorite {
@@ -99,6 +101,7 @@ span.like {
 }
 
 /* End fav toggle styles */
+
 
 
 /*Trending styles */
@@ -129,6 +132,8 @@ span.like {
 
 /* End trending styles */
 
+
+
 /*Update styles */
 
 .update .content{
@@ -147,6 +152,7 @@ span.like {
   margin-top: 0px;
 }
 /* End update styles */
+
 
 
 /* Homepage styles */
