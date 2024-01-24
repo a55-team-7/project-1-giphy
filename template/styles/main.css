@@ -277,11 +277,25 @@ span.like {
 #about h1 {
   color: rgb(187, 135, 255);
   margin-bottom: 50px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 #about h2 {
-  color: rgb(229, 210, 255);
+  color: rgb(0, 255, 4);
+  font-family: 'Courier New', Courier, monospace;
 }
+
+#about img {
+  width: 30%;
+  height: 100%;
+  border-radius: 10px;
+  border-color: blue;
+  border-width: 1px;
+  border-style: double;
+  display: block;
+  margin: 0 auto;
+}
+
 /* End about styles */
 
 
