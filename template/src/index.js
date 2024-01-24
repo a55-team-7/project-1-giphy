@@ -8,7 +8,6 @@ import { uploadGif } from './events/upload-events.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // add global listener
-
   document.addEventListener('click', event => {
 
     // nav events

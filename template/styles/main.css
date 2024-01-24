@@ -519,13 +519,29 @@ div .cursor-hover li {
 
 /* Masonry grid styles */
 .grid {
-  width: 50%;
- padding-top: 60%;
- padding-left: 50%;
+  width: 100%;
+  padding-top: 60%;
+  padding-left: 50%;
+  padding-right: 50%;
+  padding-bottom: 60%;
   background: #a200ff80;
 }
 
 
+.grid-sizer,
+.grid-item {
+  width: 33.333%; /* For a three column layout */
+  height: auto;
+  padding: 0%;
+  margin-bottom: 100px;
+}
+
+.gutter-sizer {
+  width: 2%; /* For a 2% gutter */
+}
 
 
-
+.grid-item {
+  margin-bottom: 10px;
+  float: left;
+}

@@ -37,11 +37,17 @@ export const toSingleGifView = (gif) => `
  * @return {string} The HTML representation of the GIF.
  */
 export const toGifSimple = (gif) => `
-<div class="gifs">
-  <h1 class="gif-title" id="heading">${gif.title || 'Untitled'}</h1>
-  <img src="${gif.images.fixed_width.url}"><br>
-  <button class="view-gif-btn" data-gif-id="${gif.id}">View details</button>  ${renderFavoriteStatus(gif.id)}
-</div>
+  <li>
+    <div class="gif-container">
+      <a href="#/trending/${gif.id}">
+        <img src="${gif.images.fixed_width.url}" alt="${gif.title}">
+      </a>
+      <div class="content" id="details">
+        <button class="view-gif-btn" data-gif-id="${gif.id}">view details</button>
+        ${renderFavoriteStatus(gif.id)}
+      </div>
+    </div>
+  </li>
 `;
 
 /**

@@ -36,5 +36,5 @@ export const uploadGif = (event) => {
     body: formData,
   })
     .then(data => data.json())
-    .then(data => toggleUploadStatus(data.id));
+    .then(data => toggleUploadStatus(data.data.id));
 };

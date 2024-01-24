@@ -5,9 +5,6 @@ const uploaded = JSON.parse(localStorage.getItem('uploaded')) || [];
  * @param {string} gifId - The ID of the GIF to be added.
  */
 export const addUpload = (gifId) => {
-  if (uploaded.find(id => id === gifId)) {
-    return;
-  }
 
   uploaded.push(gifId);
   localStorage.setItem('uploaded', JSON.stringify(uploaded));
